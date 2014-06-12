@@ -2,6 +2,8 @@
 
 "A person's name is to him or her the sweetest and most important sound in any language." - Dale Carnegie
 
+"Always use the proper name for things, Harry. Fear of a name increases fear of the thing itself." - Albus Dumbledore
+
 Want to advance your career--or just brighten someone's day? Greeting a person by name isn't just polite. It's a powerful way to solidify relationships. 
 
 This app will help people quickly learn the names of a specific group of people. Potential uses are:
@@ -25,4 +27,16 @@ Advanced features may include:
 - Multiple choice questions.
 - Pull names of friends from Facebook groups, LinkedIn or Yale Facebook.
 
+
+### Possible names for app:
+"First Name Basis"
+"Ishmael"
+"Recall"
+"YouRemembered"
+"HelloAgain"
+"Name Vault"
+"Name Box"
+"NameDeck"
+"Name Recognition"
+"Recognition"
 
