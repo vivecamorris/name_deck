@@ -6,6 +6,7 @@ end
 
 session = {}
 session['alldecks'] = []
+
 get '/' do
 	erb :index
 end
@@ -15,10 +16,10 @@ get '/new' do
 end
 
 post '/new' do
-	new = Deck.new(params[:setname], params[:setdescription])
-	new.add_person(params[:name], params[:url], params[:description])
-	session['alldecks'] << new
-	return session.to_s
+	newdeck = Deck.new(params[:setname], [], params[:setdescription])
+	newdeck.add_person(params[:name], params[:photourl], params[:description])
+	session['alldecks'] << newdeck
+	erb :results, :locals => {:alldecks => session['alldecks']}
 end
 
 class Person
