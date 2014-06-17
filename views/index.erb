@@ -1,0 +1,15 @@
+<html>
+<head>
+<title> NameDeck </title>
+</head>
+<body>
+
+<h1> NameDeck </h1>
+
+<% bootcamp.deckpeople.each do |person| %>
+<%= person.name %> <br>
+<img src = <%= person.url %>><br>
+<%= person.description %><br><br>
+<% end %>
+
+</body>

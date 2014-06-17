@@ -1,14 +1,18 @@
 require 'sinatra'
+require_relative 'decks'
 
 configure do 
 	enable :sessions
 end
 
+
 session = {}
 session['alldecks'] = []
 
 get '/' do
-	erb :index
+	bootcampdataobj = BootcampData.new
+	puts bootcampdataobj.bootcamp
+	erb :index, :locals => { :bootcamp => bootcampdataobj.bootcamp }
 end
 
 get '/results' do
@@ -21,7 +25,7 @@ end
 
 post '/newdeck' do
 	params[:deckname] = Deck.new(params[:deckname], [], params[:deckdescription])
-	# newdeck.add_person(params[:name], params[:photourl], params[:description])
+	newdeck.add_person(params[:name], params[:photourl], params[:description])
 	session['alldecks'] << params[:deckname]
 	erb :results, :locals => {:alldecks => session['alldecks']}
 	redirect '/results'
@@ -43,32 +47,4 @@ post '/:deckname/newperson' do
 	redirect '/results'
 end
 
-class Person
-	def initialize (name,url,description=nil)
-		@name = name.to_s
-		@url = url.to_s
-		@description = description.to_s
-	end
 
-	attr_accessor :name, :url, :description
-
-end
-
-class Deck
-	def initialize (deckname,deckpeople=[],deckdescription)
-		@deckname = deckname.to_s
-		@deckpeople = deckpeople
-		@deckdescription = deckdescription.to_s
-	end
-
-	attr_accessor :deckname, :deckdescription, :deckpeople
-
-	def add_person (person)
-		@deckpeople.push(person)
-	end
-
-	def delete_person (name)
-		@deckpeople.delete_if {|n| n.name == name}
-	end
-
-end
