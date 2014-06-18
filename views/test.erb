@@ -10,7 +10,7 @@
 <img src = <%= randomperson.url %> height = "400px"> 
 
 <form method = "post" action = "/test">
-<input type = "hidden" name = "correctname" value = <%= randomperson.name %>>
+<input type = "hidden" name = "correctname" value = "<%= randomperson.name %>">
 <input type = "text" name = "nameinput" placeholder="What's my name?" size = "55px"><br>
 <input type = "submit" value = "Submit">
 </form>

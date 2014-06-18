@@ -25,7 +25,9 @@ post '/test' do
 	if params[:nameinput] == params[:correctname]
 		erb :correct
 	else
-		erb :incorrect
+		erb :incorrect, :locals => {:nameinput => params[:nameinput],
+									:correctname => params[:correctname],
+									:bootcamp => session['alldecks'].find{|a| a.deckname == "Tech Bootcamp 2014" } }
 	end
 end
 

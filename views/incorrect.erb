@@ -1,0 +1,16 @@
+<html>
+<head>
+<title> NameDeck </title>
+<link rel = 'stylesheet' type = 'text/css' href = 'style.css'>
+</head>
+<body>
+	<h1>You entered: <%= nameinput %>.</h1>
+	<% person = bootcamp.deckpeople.find{|person| person.name == correctname } %>
+	<form method = "post" action = "/test">
+		<img src = <%= person.url %> height = "400px"> 
+		<input type = "hidden" name = "correctname" value = "<%= person.name %>">
+		<input type = "text" name = "nameinput" placeholder="What's my name?" size = "55px"><br>
+		<input type = "submit" value = "Submit">
+	</form>
+</body>
+</html>
