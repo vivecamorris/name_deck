@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> NameDeck </title>
+<link rel = 'stylesheet' type = 'text/css' href = 'style.css'>
+</head>
+<body>
+
+<h1> NameDeck </h1>
+
+<div id = 'container'>
+
+<% bootcamp.deckpeople.each do |person| %>
+
+<div class = 'pic'>
+	<div class = 'info'>
+	<%= person.name %> <br>
+	<%= person.description %><br>
+	</div>
+	<div class = 'picture' style = "background-image: url(<%= person.url %>);"> 
+	</div>
+</div>
+	<% end %>
+</div>
+
+</body>
