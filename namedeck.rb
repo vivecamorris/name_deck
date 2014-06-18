@@ -5,12 +5,20 @@ configure do
 	enable :sessions
 end
 
-
-session = {}
-session['alldecks'] = []
+before do
+	session['alldecks'] ||= []
+	unless session['alldecks'].any?{|deck| deck.deckname == "Tech Bootcamp 2014"}
+		bootcampdataobj = BootcampData.new
+		session['alldecks'] << bootcampdataobj.bootcamp
+	end
+end
 
 get '/' do
 	erb :index
+end
+
+get '/gallery' do
+	erb :gallery, :locals => { :alldecks => session['alldecks'] }
 end
 
 get '/results' do
@@ -32,22 +40,25 @@ post '/test' do
 end
 
 def get_random_photo(deckpeople)
-	successful = false
-	while successful == false
+	notquizzed = deckpeople.find_all{ |person| person.quizzed == false }
+	if notquizzed != []
 		num = rand(deckpeople.length)
-		persontobequizzed = deckpeople[num]
-			if persontobequizzed.quizzed == false
-				persontobequizzed.quizzed = true
-				successful = true
-				return persontobequizzed
-			end
+		persontobequizzed = notquizzed[num]
+		persontobequizzed.quizzed = true
+		return persontobequizzed
+	else
+		return "done"
 	end
 end
 
 get '/test' do
 	bootcampdeck = session['alldecks'].find{|a| a.deckname == "Tech Bootcamp 2014"}
 	randomperson = get_random_photo(bootcampdeck.deckpeople)
-	erb :test, :locals => { :randomperson => randomperson}
+	if randomperson == "done"
+		erb :done, :locals => { :randomperson => randomperson}
+	else
+		erb :test, :locals => { :randomperson => randomperson}
+	end
 end
 
 get '/:deckname/newperson' do

@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> NameDeck </title>
+<link rel = 'stylesheet' type = 'text/css' href = 'style.css'>
+</head>
+<body>
+
+<h1> NameDeck </h1>
+
+<div id = 'container'>
+	<% alldecks.each do |deck| %>
+	<div class="pic" style="border: 1px solid black">
+		<div class="description">
+			<a href="/display">
+				<h2><%= deck.deckname %></h2></a>
+				<p><%= deck.deckdescription %></h2></a>
+		</div>
+	</div>
+	<% end %>
+</div>
+</body>
+</html>
