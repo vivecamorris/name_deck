@@ -42,7 +42,7 @@ end
 def get_random_photo(deckpeople)
 	notquizzed = deckpeople.find_all{ |person| person.quizzed == false }
 	if notquizzed != []
-		num = rand(deckpeople.length)
+		num = rand(notquizzed.length)
 		persontobequizzed = notquizzed[num]
 		persontobequizzed.quizzed = true
 		return persontobequizzed
