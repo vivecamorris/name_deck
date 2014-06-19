@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'pry'
 require_relative 'decks'
 
 configure do 
@@ -31,7 +32,7 @@ end
 
 post '/test' do
 	if params[:nameinput] == params[:correctname]
-		erb :correct
+		erb :correct 
 	else
 		erb :incorrect, :locals => {:nameinput => params[:nameinput],
 									:correctname => params[:correctname],
@@ -39,25 +40,35 @@ post '/test' do
 	end
 end
 
-def get_random_photo(deckpeople)
-	notquizzed = deckpeople.find_all{ |person| person.quizzed == false }
-	if notquizzed != []
-		num = rand(notquizzed.length)
-		persontobequizzed = notquizzed[num]
-		persontobequizzed.quizzed = true
-		return persontobequizzed
-	else
-		return "done"
-	end
-end
+# def get_random_photo(deckpeople)
+# 	notquizzed = deckpeople.find_all{ |person| person.quizzed == false }
+# 	if notquizzed != []
+# 		num = rand(notquizzed.length)
+# 		persontobequizzed = notquizzed[num]
+# 		return persontobequizzed
+# 	else
+# 		return "done"
+# 	end
+# end
 
 get '/test' do
-	bootcampdeck = session['alldecks'].find{|a| a.deckname == "Tech Bootcamp 2014"}
-	randomperson = get_random_photo(bootcampdeck.deckpeople)
-	if randomperson == "done"
-		erb :done, :locals => { :randomperson => randomperson}
+	# bootcampdeck = session['alldecks'][0]
+	# find{|a| a.deckname == "Tech Bootcamp 2014"}
+
+	# Alias the slides that people have not viewed yet into 'notquizzed'
+	notquizzed = session['alldecks'][0].deckpeople.find_all{ |person| person.quizzed == false }
+
+	if notquizzed != []
+		# Choose a random person to be quizzed from 'notquizzed'
+		num = rand(notquizzed.length)
+		persontobequizzed = notquizzed[num]
+
+		# 
+		isthisquizzed = session['alldecks'][0].deckpeople.find{ |x| x.name == persontobequizzed.name}
+		isthisquizzed.quizzed = true
+		erb :test, :locals => { :randomperson => persontobequizzed }
 	else
-		erb :test, :locals => { :randomperson => randomperson}
+		erb :done
 	end
 end
 
