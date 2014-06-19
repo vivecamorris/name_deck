@@ -3,7 +3,7 @@ require 'pry'
 require_relative 'decks'
 
 configure do 
-	enable :sessions
+	use Rack::Session::Pool
 end
 
 before do
@@ -68,6 +68,7 @@ get '/test' do
 		isthisquizzed.quizzed = true
 		erb :test, :locals => { :randomperson => persontobequizzed }
 	else
+		session.clear
 		erb :done
 	end
 end
@@ -77,8 +78,6 @@ get '/:deckname/newperson' do
 end
 
 get '/display' do
-	bootcampdataobj = BootcampData.new
-	session['alldecks'] << bootcampdataobj.bootcamp
 	erb :display, :locals => { :bootcamp => session['alldecks'].find{|a| a.deckname == "Tech Bootcamp 2014"} }
 end
 
