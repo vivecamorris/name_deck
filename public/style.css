@@ -13,23 +13,23 @@
 
 * {margin: 0; padding: 0;}
 body {
-  background: #00a651;}
+  background: #F0F0D8;}
 
-.red {
-	color: red;
-}
 
 h1 {
 	font-size: 100px;
 	text-align: center;
 	font-family: 'card_charactersregular';
+	color: #D83030;
 }
 
 a {
 	text-decoration: none;
 	color: black;
+
 }
 .card {
+  
   position: relative;
   float: left;
   left: 35%;
@@ -45,7 +45,8 @@ a {
 
 .card p {
   text-align: center;
-  font: 25px Georgia, Times New Roman, serif;
+  font-family: 'Oranienbaum', serif;
+  font-size: 30px;
 }
 
 .suitdiamonds:before, .suitdiamonds:after {
