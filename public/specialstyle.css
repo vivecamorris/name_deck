@@ -1,0 +1,135 @@
+#container {
+	position: absolute;
+	top: 200px;
+	left: 30%;
+}
+#info {position:relative; z-index:10;}
+
+.cards {padding:0; margin:50px auto; list-style:none; position:relative; height:270px; width:200px;}
+.cards > li {width:200px; height:270px; position:absolute; top:0; left:0; background:url(trans.gif);
+transform-origin: 100px 300px;
+-ms-transform-origin: 100px 300px;
+-o-transform-origin: 100px 300px;
+-moz-transform-origin: 100px 300px;
+-webkit-transform-origin: 100px 300px;
+
+-webkit-transition: 0.75s;
+-moz-transition: 0.75s;
+-o-transition: 0.75s;
+transition: 0.75s;
+}
+
+.cards > li > a {display:block; width:200px; height:270px; border:1px solid #ccc; position:absolute; background:#fff; top:0; left:0; color:#000; text-decoration:none; font:bold 17px/21px 'Oldenburg', sans-serif;
+border-radius:10px;
+-moz-border-radius:10px;
+-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 2px;
+}
+
+.cards > li > a:after,
+.cards > li > a:before {display:block; width:75%; height:75%; content: ""; position:absolute; z-index:-1;}
+
+.cards > li > a:after {right: 5px; bottom:5px;
+transform-origin: bottom right;
+-o-transform-origin: bottom right;
+-moz-transform-origin: bottom right;
+-webkit-transform-origin: bottom right;
+-ms-transform-origin: bottom right;
+transform: rotate(5deg) skew(12deg);
+-o-transform: rotate(5deg) skew(12deg);
+-moz-transform: rotate(5deg) skew(12deg);
+-webkit-transform: rotate(5deg) skew(12deg);
+-ms-transform: rotate(5deg) skew(12deg);
+box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3); 
+-moz-box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3); 
+-webkit-box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3);
+} 
+
+.cards > li > a:before {left:5px; bottom:5px;
+transform-origin: bottom left;
+-o-transform-origin: bottom left;
+-moz-transform-origin: bottom left;
+-webkit-transform-origin: bottom left;
+-ms-transform-origin: bottom left;
+transform: rotate(-5deg) skew(-12deg); 
+-o-transform: rotate(-5deg) skew(-12deg); 
+-moz-transform: rotate(-5deg) skew(-12deg); 
+-webkit-transform: rotate(-5deg) skew(-12deg);
+-ms-transform: rotate(-5deg) skew(-12deg); 
+box-shadow: -4px 8px 12px rgba(0, 0, 0, 0.3); 
+-moz-box-shadow: -4px 8px 12px rgba(0, 0, 0, 0.3); 
+-webkit-box-shadow: -4px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+ul.cards > li a b {
+display:block; width:100px; height:20px; margin-left:-40px; text-align:right; margin-top:50px; 
+transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg);
+-webkit-transform: rotate(-90deg);
+}
+
+ul.cards:hover > li:nth-of-type(1) {
+transform: rotate(-30deg);
+-ms-transform: rotate(-30deg);
+-o-transform: rotate(-30deg);
+-moz-transform: rotate(-30deg);
+-webkit-transform: rotate(-30deg);
+}
+ul.cards:hover > li:nth-of-type(2) {
+transform: rotate(-18deg);
+-ms-transform: rotate(-18deg);
+-o-transform: rotate(-18deg);
+-moz-transform: rotate(-18deg);
+-webkit-transform: rotate(-18deg);
+}
+ul.cards:hover > li:nth-of-type(3) {
+transform: rotate(-6deg);
+-ms-transform: rotate(-6deg);
+-o-transform: rotate(-6deg);
+-moz-transform: rotate(-6deg);
+-webkit-transform: rotate(-6deg);
+}
+ul.cards:hover > li:nth-of-type(4) {
+transform: rotate(6deg);
+-ms-transform: rotate(6deg);
+-o-transform: rotate(6deg);
+-moz-transform: rotate(6deg);
+-webkit-transform: rotate(6deg);
+}
+ul.cards:hover > li:nth-of-type(5) {
+transform: rotate(180deg);
+-ms-transform: rotate(18deg);
+-o-transform: rotate(18deg);
+-moz-transform: rotate(18deg);
+-webkit-transform: rotate(18deg);
+}
+ul.cards:hover > li:nth-of-type(6) {
+transform: rotate(30deg);
+-ms-transform: rotate(30deg);
+-o-transform: rotate(30deg);
+-moz-transform: rotate(30deg);
+-webkit-transform: rotate(30deg);
+}
+
+ul.cards > li:nth-of-type(-n+5):hover {height:480px; top:-200px;
+transform-origin: 100px 470px;
+-ms-transform-origin: 100px 470px;
+-o-transform-origin: 100px 470px;
+-moz-transform-origin: 100px 470px;
+-webkit-transform-origin: 100px 470px;
+}
+
+ul.cards li ul {font: bold 15px/20px 'Oldenburg'; padding:0; margin:0; list-style:none; position:absolute; top:25px; left:30px;}
+ul.cards li ul li a {font:bold 14px/16px 'Oldenburg', sans-serif; color:#c00; text-decoration:none;}
+ul.cards li ul li h2 {font:bold 25px 'Oldenburg', sans-serif; color:#c00; text-decoration:none; padding: 5px;}
+ul.cards li ul li a:hover {color:#000;}
+ul.cards li span:nth-of-type(1) {font-size:30px; position:absolute; top:10px; right:10px; color:#c00;}
+ul.cards li em:nth-of-type(1) {font-size:30px; position:absolute; top:10px; right:10px; color:#000;}
+ul.cards li span:nth-of-type(2) {font-size:30px; position:absolute; top:220px; left:10px; color:#c00;}
+ul.cards li em:nth-of-type(2) {font-size:30px; position:absolute; top:220px; left:10px; color:#000;}
+
+ul.cards li i {font:normal 200px/270px 'Oldenburg', sans-serif; color:#c00; position:absolute; left:0; top:0; width:200px; text-align:center;}
