@@ -1,12 +1,3 @@
-<html>
-<head>
-<title> NameDeck </title>
-<link rel = 'stylesheet' type = 'text/css' href = 'style.css'>
-<link href='http://fonts.googleapis.com/css?family=Oldenburg' rel='stylesheet' type='text/css'>
-</head>
-<body>
-
-<h1> NameDeck </h1>
 <h2><a href="/test">Quiz Me</a>
 <div id = 'container'>
 
@@ -14,13 +5,14 @@
 
 <div class = 'pic'>
 	<div class = 'info suitdiamonds'>
-	<%= person.name %> <br>
-	<%= person.description %><br>
+	<br>
+	<%= person.name %> 
+		<div class = "description"> 
+		<%= person.description %>
+		</div>
 	</div>
 	<div class = 'picture' style = "background-image: url(<%= person.url %>);"> 
 	</div>
 </div>
 	<% end %>
 </div>
-
-</body>

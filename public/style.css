@@ -14,7 +14,8 @@
 
 * {margin: 0; padding: 0;}
 body {
-  background: #F0F0D8;}
+  background: #F0F0D8;
+  font-size: 18px;}
 
 
 h1 {
@@ -138,6 +139,11 @@ div[class*='suit']:after {
   height: 200px;
   -webkit-transform: rotateY(180deg);
   transform: rotateX( 180deg );
+}
+
+.description {
+  padding: 6px;
+  font-size: 15px;
 }
 
 #container {
