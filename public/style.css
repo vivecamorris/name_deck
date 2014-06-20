@@ -90,16 +90,28 @@ div[class*='suit']:after {
 
 .pic {
 	position: relative;
-	display: inline-block;
-	width: 280px;
-	height: 280px;
-	margin: 20px 0px;
+  display: inline-block;
+	width: 160px;
+	height: 220px;
+	margin: 20px;  
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-.picture:hover {
-	opacity: 0;
+/*contains both front and back of card in gallery */
+.pic div {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
+.pic:hover {
+	transform: rotateY( 180deg );
+  -webkit-transform: rotateY(180deg);
+}
+
+/*front of card in gallery*/
 .picture {
 	position: absolute;
 	top: 0;
@@ -109,18 +121,27 @@ div[class*='suit']:after {
 	background-size: cover;
 	background-position: center center;
 	border-radius: 20px;
+  z-index: 2;
 }
 
+/*back of card in gallery*/
 .info {
 	padding: 10px;
 	border-radius: 20px;
+  background-color: white;
+  width: 140px;
+  height: 200px;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateX( 180deg );
 }
 
 #container {
-	width: 900px;
+	width: 800px;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-content: center;
+  -webkit-perspective:2000;
+  perspective:2000;
 }
