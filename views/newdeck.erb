@@ -1,12 +1,12 @@
-<form name="input" action="/newdeck" method="post">
+<h3> Create a new deck: </h3>
+<br>
+<form name="input" action="/newdeck" method="post" autocomplete = "off">
+	<div class = "quizcontainer"> 
 	<label>
-		Deck name: <br>
-		<input type="text" name="deckname" placeholder="deck name">
-	</label>
-	<br>
-	<label>
-		Deck description: <br>
-		<textarea name="deckdescription"></textarea>
-	</label>
+	<input type="text" name="deckname" placeholder="Deck Name">
+	<br><br>
+	<input type="text" name="deckdescription" placeholder="Deck Description">
+	<br><br>
 	<input type="submit" value="Submit">
+</div>
 </form>

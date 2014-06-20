@@ -82,15 +82,19 @@ get '/display' do
 end
 
 post '/newdeck' do
-	params[:deckname] = Deck.new(params[:deckname], [], params[:deckdescription])
-	newdeck.add_person(params[:name], params[:photourl], params[:description])
-	session['alldecks'] << params[:deckname]
-	erb :results, :locals => {:alldecks => session['alldecks']}
-	redirect '/results'
+	# params[:deckname] = Deck.new(params[:deckname], [], params[:deckdescription])
+	# params[:deckname].add_person(params[:name], params[:photourl], params[:description])
+	# session['alldecks'] << params[:deckname]
+	# erb :results, :locals => {:alldecks => session['alldecks']}
+	erb :newperson
 end
 
 get '/newperson' do
 	erb :newperson
+end
+
+post '/newperson' do
+	redirect '/'
 end
 
 post '/:deckname/newperson' do

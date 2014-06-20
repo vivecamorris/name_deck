@@ -1,18 +1,11 @@
-<form name="input" action="/newperson" method="post">
-	<div class="personinput">
-	<label>
-		Name: <br>
-		<input type="text" name="name" placeholder="name">
-	</label>
-	<label><br>
-		Description<br>
-		<textarea name ="description"></textarea>
-	</label>
-	<label>
-		<br>
-		Photo Url<br>
-		<input type="text" name="photourl" placeholder="photo url">
-	</label>
-	</div>
+<h3> Now add people: </h3>
+<br>
+<div class = "quizcontainer">
+<form name="input" action="/newperson" method="post" autocomplete = "off">
+	<input type="text" name="name" placeholder="Name"></br></br>
+	<input type="text" name="description" placeholder="Description"></br></br>
+	<input type="text" name="photourl" placeholder="Photo URL"></br></br>
+	<input type="button" value="Add Another">
 	<input type="submit" value="Submit">
 </form>
+</div>
