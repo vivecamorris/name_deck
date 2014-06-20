@@ -2,11 +2,13 @@
 * {margin: 0; padding: 0;}
 body {
   background: #F0F0D8;
-  font-size: 18px;}
+  font-size: 18px;
+  font-family: 'Oldenburg', serif;
+  }
 
 
 h1 {
-	font-size: 80px;
+	font-size: 100px;
   letter-spacing: -2px;
 	text-align: center;
 	font-family: 'Oldenburg', cursive;
@@ -14,10 +16,25 @@ h1 {
   font-weight: 400;
 }
 
+h3 {
+  font-size: 45px;
+  letter-spacing: -2px;
+  text-align: center;
+  font-family: 'Oldenburg', cursive;
+  color: #909060;
+  font-weight: 400;
+}
+
 a {
 	text-decoration: none;
 	color: black;
 
+}
+
+#header {
+  background-color: #D8D8A8;
+  border-bottom: 10px solid #909060;
+  margin-bottom: 30px;
 }
 .card {
   
@@ -143,3 +160,54 @@ div[class*='suit']:after {
   -webkit-perspective:2000;
   perspective:2000;
 }
+.quizcontainer {
+  text-align: center;
+}
+/*.quizpiccontainer {
+  width: 270px;
+  height: 360px;
+  margin: 20px;
+  position: relative;
+}
+*/
+.quizpic {
+  margin: 20px auto;
+  height: 360px;
+  width: 270px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 20px;
+  color: ;
+}
+input[type=text] {
+  background-color: #D8D8A8;
+  font-size: 20px;
+  border: 0;
+  width: 270px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  color: #616B4B;
+}
+input[type=submit], input[type=button], .button {
+  margin: 10px;
+  font-size: 20px;
+  border: 2px solid #909060;
+  display: inline-block;
+  background-color: #D8D8A8;
+  border-radius: 5px;
+  font-family: 'Oldenburg', serif;
+  padding: 10px;
+  color: #616B4B;
+    transition: all .25s ease-in-out;
+   -moz-transition: all .25s ease-in-out;
+   -webkit-transition: all .25s ease-in-out;
+
+}
+
+input[type=submit]:hover {
+  color: #D8D8A8;
+  background-color: #909060;
+  border: 2px solid #D8D8A8: 
+}
+

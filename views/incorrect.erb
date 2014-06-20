@@ -1,7 +1,7 @@
-<h1>You entered: <%= nameinput %>.</h1>
 <% person = bootcamp.deckpeople.find{|person| person.name == correctname } %>
+<div class="quizcontainer"><h3>Try again.</h3>
 <form method = "post" action = "/test">
-	<img src = <%= person.url %> height = "400px"> 
+	<div class="quizpic" style = "background-image: url(<%= person.url %>);"></div> 
 	<input type = "hidden" name = "correctname" value = "<%= person.name %>">
 	<input type = "text" name = "nameinput" placeholder="What's my name?" size = "55px"><br>
 	<input type = "submit" value = "Submit">
@@ -11,3 +11,4 @@
 </form>
 
 <p id='actualname' style="display: none"> <%= correctname %> </p>
+</div>
