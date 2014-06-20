@@ -36,7 +36,7 @@ a {
   border-bottom: 10px solid #909060;
   margin-bottom: 30px;
 }
-.card {
+/*.card {
   
   position: relative;
   float: left;
@@ -55,7 +55,7 @@ a {
   text-align: center;
   font-family: 'Oranienbaum', serif;
   font-size: 30px;
-}
+}*/
 
 .suitdiamonds:before, .suitdiamonds:after {
   content: "♦";
@@ -95,6 +95,35 @@ div[class*='suit']:after {
   right: 5px;
   bottom: 5px;
 }
+
+.gallerycard.suitdiamonds:before {
+  position: absolute;
+  font-size: 35px;
+  left: 10px;
+  top: 15px;
+}
+ 
+.gallerycard.suitdiamonds:after {
+  position: absolute;
+  font-size: 35px;
+  right: 10px;
+  bottom: 15px;
+}
+
+.gallerycard.suitspades:before {
+  position: absolute;
+  font-size: 35px;
+  left: 10px;
+  top: 15px;
+}
+ 
+.gallerycard.suitspades:after {
+  position: absolute;
+  font-size: 35px;
+  right: 10px;
+  bottom: 15px;
+}
+
 
 .pic {
 	position: relative;
@@ -209,5 +238,35 @@ input[type=submit]:hover, input[type=button]:hover, .button:hover {
   color: #D8D8A8;
   background-color: #909060;
   border: 2px solid #D8D8A8: 
+}
+
+.gallerycard {
+  position: relative;
+  display:inline-block; 
+  width:190px; 
+  height:250px; 
+  border:1px solid #ccc; 
+  background:#fff;
+  color:#000; 
+  text-decoration:none; 
+  font:bold 17px/21px 'Oldenburg', sans-serif;
+border-radius:10px;
+-moz-border-radius:10px;
+-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 20px 10px;
+transition: all 0.5s ease-in-out;
+-webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+-moz-transition: all 0.5s ease-in-out; /** Firefox **/
+-o-transition: all 0.5s ease-in-out; /** Opera **/
+
+}
+.gallerycard:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1) ;
+  transform: scale(1.1) ;
 }
 
