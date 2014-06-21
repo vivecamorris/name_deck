@@ -241,6 +241,7 @@ input[type=submit]:hover, input[type=button]:hover, .button:hover {
 }
 
 .gallerycard {
+  vertical-align: top;
   position: relative;
   display:inline-block; 
   width:190px; 
@@ -262,6 +263,10 @@ transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out; /** Firefox **/
 -o-transition: all 0.5s ease-in-out; /** Opera **/
 
+}
+
+.gallerycard h2 {
+  margin-top: 60px;
 }
 .gallerycard:hover {
   -webkit-transform: scale(1.1);
