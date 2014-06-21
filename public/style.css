@@ -4,8 +4,14 @@ body {
   background: #F0F0D8;
   font-size: 18px;
   font-family: 'Oldenburg', serif;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
   }
 
+div {
+  vertical-align:top; /* add this rule */
+}
 
 h1 {
 	font-size: 100px;
@@ -180,7 +186,7 @@ div[class*='suit']:after {
 }
 
 #container {
-	width: 900px;
+	width: 1000px;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
