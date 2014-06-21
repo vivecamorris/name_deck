@@ -2,7 +2,7 @@
 * {margin: 0; padding: 0;}
 body {
   background: #F0F0D8;
-  font-size: 18px;
+  font-size: 19px;
   font-family: 'Oldenburg', serif;
   -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,13 +22,19 @@ h1 {
   font-weight: 400;
 }
 
-h3 {
+
+
+h2 {
   font-size: 45px;
   letter-spacing: -2px;
   text-align: center;
   font-family: 'Oldenburg', cursive;
   color: #909060;
   font-weight: 400;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 a {
@@ -42,26 +48,7 @@ a {
   border-bottom: 10px solid #909060;
   margin-bottom: 30px;
 }
-/*.card {
-  
-  position: relative;
-  float: left;
-  left: 35%;
-  margin-right: 10px;
-  width: 110px;
-  height: 200px;
-  border-radius: 10px;
-  background: #fff;
-  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
-  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
-  padding: 30px;
-}
 
-.card p {
-  text-align: center;
-  font-family: 'Oranienbaum', serif;
-  font-size: 30px;
-}*/
 
 .suitdiamonds:before, .suitdiamonds:after {
   content: "♦";
@@ -91,15 +78,15 @@ a {
 div[class*='suit']:before {
   position: absolute;
   font-size: 35px;
-  left: 5px;
-  top: 5px;
+  left: 0px;
+  top: 0px;
 }
  
 div[class*='suit']:after {
   position: absolute;
   font-size: 35px;
-  right: 5px;
-  bottom: 5px;
+  right: 0px;
+  bottom: 0px;
 }
 
 .gallerycard.suitdiamonds:before {
@@ -135,12 +122,18 @@ div[class*='suit']:after {
 	position: relative;
   display: inline-block;
 	width: 180px;
-	height: 240px;
-	margin: 20px;  
+	height: 230px;
+	margin: 20px 5px;  
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  border: 10px solid white;
+  border-radius: 10px;
+  -moz-border-radius:10px;
+-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /*contains both front and back of card in gallery */
@@ -163,19 +156,17 @@ div[class*='suit']:after {
 	width: 100%;
 	background-size: cover;
 	background-position: center center;
-	border-radius: 20px;
   z-index: 2;
 }
 
 /*back of card in gallery*/
 .info {
-	padding: 20px;
-	border-radius: 20px;
+	padding: 10px;
   background-color: white;
   font-family: 'Oldenburg', cursive;
   text-align: center;
-  width: 140px;
-  height: 200px;
+  width: 160px;
+  height: 210px;
   -webkit-transform: rotateY(180deg);
   transform: rotateX( 180deg );
 }
@@ -186,17 +177,36 @@ div[class*='suit']:after {
 }
 
 #container {
-	width: 1000px;
+	width: 75%;
+  max-width: 1250px;
+  min-width: 640px;
 	margin: 0 auto;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
 	align-content: center;
   -webkit-perspective:2000;
   perspective:2000;
 }
 .quizcontainer {
   text-align: center;
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1250px;
+  min-width: 640px;
 }
 /*.quizpiccontainer {
   width: 270px;
@@ -271,8 +281,9 @@ transition: all 0.5s ease-in-out;
 
 }
 
-.gallerycard h2 {
+.gallerycard h3 {
   margin-top: 60px;
+  font-weight: 400;
 }
 .gallerycard:hover {
   -webkit-transform: scale(1.1);
@@ -281,3 +292,10 @@ transition: all 0.5s ease-in-out;
   transform: scale(1.1) ;
 }
 
+.wrong {
+  color: #D83030;
+}
+
+.big {
+  font-size: 30px;
+}

@@ -66,7 +66,9 @@ get '/test' do
 		# 
 		isthisquizzed = session['alldecks'][0].deckpeople.find{ |x| x.name == persontobequizzed.name}
 		isthisquizzed.quizzed = true
-		erb :test, :locals => { :randomperson => persontobequizzed }
+		erb :test, :locals => { :randomperson => persontobequizzed,
+								:numleft => notquizzed.length,
+								:numtotal => session['alldecks'][0].deckpeople.length }
 	else
 		session.clear
 		erb :done
