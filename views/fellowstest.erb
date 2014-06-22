@@ -1,0 +1,13 @@
+<!-- <img class="quizimage" src = <%= randomfellow.url %> height = "400px">  -->
+<div class="quizcontainer">
+<h3> <%= numleftfellows %> / <%= numtotalfellows %> to go</h3>
+<div class = 'quizpic' style = "background-image: url(<%= randomfellow.url %>);"> 
+	</div>
+
+
+<form method = "post" action = "/fellowstest" autocomplete="off">
+<input type = "hidden" name = "correctname" value = "<%= randomfellow.name %>">
+<input type = "text" name = "nameinput" placeholder="What's my name?" size = "55px"><br>
+<input type = "submit" value = "Submit">
+</form>
+</div>

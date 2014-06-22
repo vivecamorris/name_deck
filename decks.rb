@@ -64,9 +64,24 @@ class BootcampData
 		@bootcamp.add_person("Marcus Russi", "photos/marcus_russi.jpg", "Branford 2017", false)
 		@bootcamp.add_person("Casey Watts", "photos/casey_watts.jpg", "Yale ITS", false)
 		@bootcamp.add_person("Sara Hamilton", "photos/sara_hamilton.jpg", "Stiles 2016", false)
+		@bootcamp.add_person("Jenny Allen", "photos/jenny_allen.jpg", "Trumbull 2016", false)
 	end
 	attr_reader :bootcamp
 end
 
+class YEIFellowsData
+	def initialize
+	@fellows = Deck.new("YEI Fellowship Teams", [], "2014-15 Fellows")
+	@fellows.add_person("109 Design", "fellows/109_design.jpg", "", false)
+	@fellows.add_person("Sol Hydration", "fellows/sol_hydration.jpg", "", false)
+	@fellows.add_person("P2P Games", "fellows/p2p_games.jpg", "", false)
+	@fellows.add_person("Alacrity Semiconductors", "fellows/alacrity_semiconductors.jpg", "", false)
+	@fellows.add_person("Chive", "fellows/chive.jpg", "", false)
+	@fellows.add_person("A&J Designs", "fellows/a_and_j_designs.jpg", "", false)
+	@fellows.add_person("Citisense", "fellows/citisense.jpg", "", false)
+	@fellows.add_person("Trinity Mobile Networks", "fellows/trinity_mobile_networks.jpg", "", false)
 
+	end
+	attr_reader :fellows
+end
 

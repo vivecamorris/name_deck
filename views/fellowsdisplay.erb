@@ -1,0 +1,19 @@
+<div class = "quizcontainer">
+
+<a style="text-align: center;" class = "button big" href="/fellowstest">Quiz Me</a>
+
+</div>
+
+<div id = 'container'>
+
+<% fellows.deckpeople.shuffle.each do |person| %>
+
+<div class = 'pic'>
+<div class = 'info suitdiamonds'>
+<br><br><%=person.name %><br><span class = "description"><%=person.description %></span>
+</div>
+	<div class = 'picture' style = "background-image: url(<%= person.url %>);"> 
+	</div>
+</div>
+	<% end %>
+</div>

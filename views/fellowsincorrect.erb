@@ -1,0 +1,15 @@
+<% person = fellows.deckpeople.find{|person| person.name == correctname } %>
+<div class="quizcontainer">
+	<h2 class="wrong">Sorry, try again.</h2>
+<form method = "post" action = "/fellowstest">
+	<div class="quizpic" style = "background-image: url(<%= person.url %>);"></div> 
+	<input type = "hidden" name = "correctname" value = "<%= person.name %>">
+	<input type = "text" name = "nameinput" placeholder="What's my name?" size = "55px"><br>
+	<input type = "submit" value = "Submit">
+</form>
+<form>
+	<input name="category" type="button" value="I give up. Show me the name." onclick="toggle_visibility('actualname');">
+</form>
+
+<p id='actualname' style="display: none"> <%= correctname %> </p>
+</div>
