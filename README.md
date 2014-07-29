@@ -1,6 +1,8 @@
 # NameDeck
 
-NameDeck on Heroku: http://namedeck.herokuapp.com
+<i> Viveca Morris ES '15, Sonja Peterson DC '14 <i>
+
+On Heroku: http://namedeck.herokuapp.com
 
 "A person's name is to him or her the sweetest and most important sound in any language." - Dale Carnegie
 
