@@ -28,11 +28,11 @@ Advanced features may include:
 - Pull names of friends from Facebook groups, LinkedIn or Yale Facebook.
 
 ### Alternative names for app:
-"First Name Basis"
-"Ishmael"
-"YouRemembered"
-"HelloAgain"
-"Name Vault"
-"Name Box"
-"NameDeck"
-"Name Recognition"
+- "First Name Basis"
+- "Ishmael"
+- "YouRemembered"
+- "HelloAgain"
+- "Name Vault"
+- "Name Box"
+- "NameDeck"
+- "Name Recognition"
