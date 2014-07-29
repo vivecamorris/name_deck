@@ -1,4 +1,4 @@
-# First Name Basis
+# NameDeck
 
 "A person's name is to him or her the sweetest and most important sound in any language." - Dale Carnegie
 
@@ -27,16 +27,12 @@ Advanced features may include:
 - Multiple choice questions.
 - Pull names of friends from Facebook groups, LinkedIn or Yale Facebook.
 
-
-### Possible names for app:
+### Alternative names for app:
 "First Name Basis"
 "Ishmael"
-"Recall"
 "YouRemembered"
 "HelloAgain"
 "Name Vault"
 "Name Box"
 "NameDeck"
 "Name Recognition"
-"Recognition"
-
